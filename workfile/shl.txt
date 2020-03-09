@@ -7,3 +7,4 @@
 
 wget -qO- https://raw.githubusercontent.com/hectorm/hmirror/master/data/adguard-simplified/list.txt | \
     sed "s/^\(.*\)$/address \/\1\/#/g" > /etc/smartdns/ad.conf
+
