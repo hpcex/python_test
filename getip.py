@@ -1,18 +1,18 @@
+# 获取IP地址，只输入10.205开头的那个
+
 import socket
 
-def get_host_ip():
-    """
-    查询本机ip地址
-    :return: ip
-    """
-    try:
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.connect(('112.111.11.110', 80))
-        ip = s.getsockname()[0]
-    finally:
-        s.close()
+def GetLocalIPByPrefix(prefix):
+    r""" 多网卡情况下，根据前缀获取IP（Windows 下适用） """
+    localIP = ''
+    for ip in socket.gethostbyname_ex(socket.gethostname())[2]:
+        if ip.startswith(prefix):
+            localIP = ip
 
-    return ip
+    return localIP
 
-if __name__ == '__main__':
-    print(get_host_ip())
+print("                            ")
+print(GetLocalIPByPrefix('10.205'))
+print("                            ")
+print("按一下回车键关闭")
+input()
