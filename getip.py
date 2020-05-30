@@ -1,8 +1,6 @@
 
 # 获取IP地址，只输出10.91开头的那个
-
 import socket
-
 def GetLocalIPByPrefix(prefix):
     """ 多网卡情况下，根据前缀获取IP（Windows 下适用） """
     localIP = ''
