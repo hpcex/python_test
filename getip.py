@@ -14,5 +14,5 @@ def GetLocalIPByPrefix(prefix):
 print("                            ")
 print(GetLocalIPByPrefix('10.91'))
 print("                            ")
-print("按一下回车键关闭")
+print("按回车键关闭")
 input()
