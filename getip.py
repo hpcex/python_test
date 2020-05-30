@@ -1,4 +1,4 @@
-# 获取IP地址，只输入10.205开头的那个
+# 获取IP地址，只输出10.91开头的那个
 
 import socket
 
@@ -12,7 +12,7 @@ def GetLocalIPByPrefix(prefix):
     return localIP
 
 print("                            ")
-print(GetLocalIPByPrefix('10.205'))
+print(GetLocalIPByPrefix('10.91'))
 print("                            ")
 print("按一下回车键关闭")
 input()
